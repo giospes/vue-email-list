@@ -12,8 +12,8 @@
     <h1 class="text-center p-3">Random email</h1>
     <main class="d-flex flex-column justify-content-center align-items-center vh-50">
         <button @click="generateEmails" class="btn btn-primary m-3">Genera Emails</button>
-        <ul>
-            <li v-for="email in emails">{{email}}</li>
+        <ul v-if="emails.length == maxNumber">
+            <li  v-for="email in emails">{{email}}</li>
         </ul>
     </main>
     
